@@ -3,7 +3,7 @@ $n$ observations, $d$ features, multiple classes
 
 ||Train Efficiency|Prediction Efficiency|Interpretability|Accuracy|No. of Features|Data Preprocessing|Method|
 |:------|:--------|:---------|:---------|:------------|:-----------|:------------|:-----------|
-|KNN|$O(1)$|$O(n^2)$|Good: Definition of Distances|Good if distance is well defined|small (curse of dimension)|balanced scaling|Measure distance|
+|KNN|$O(1)$|$O(dn^2)$|Good: Definition of Distances|Good if distance is well defined|small (curse of dimension)|balanced scaling|Measure distance|
 |Decision Tree|$m$: depth of the tree. Continuous: $O(mdn\log(n))$. Categorical: $O(nd)$|$O(m)$|Good: Comparisons at nodes|Good|Can be large|litte if the data is clean|Divide according to features|
 |AdaBoost|$T$: No. of weak learners. $f$: Training time for each learner. $O(T*f)$|$p$: predicting time for each learner. $O(T*p)$|Bad|Better|Can be large|little if use Decision tree as base learner|Learn from errors and average|
 |Bagging|$T$: No. of Bootstrapping. $f$: Training time for each learner. $O(T*f)$|$p$: predicting time for each learner. $O(T*p)$|Bad|Better|Can be large|little if use decision tree as base learner|Average over Bootstrapping learners that use randomly select observations with replacement|
